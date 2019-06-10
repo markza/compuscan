@@ -1,0 +1,63 @@
+{
+  "name": "compuscan",
+  "version": "0.0.0",
+  "description": "Retrieve credit check via the Compuscan SOAP API",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "test": "./node_modules/.bin/jest --config jest.config.js",
+    "test:watch": "./node_modules/.bin/jest --config jest.config.js --watchAll",
+    "build": "./node_modules/.bin/tsc",
+    "format": "./node_modules/.bin/prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "./node_modules/.bin/tslint -p tsconfig.json",
+    "release": "./node_modules/.bin/semantic-release"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "author": "Mark Miller",
+  "license": "MIT",
+  "keywords": [
+    "creditcheck",
+    "compuscan"
+  ],
+  "repository": "",
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "@types/jest": "^24.0.13",
+    "@types/lodash": "^4.14.134",
+    "@types/xml2js": "^0.4.4",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "jest": "^24.8.0",
+    "jest-xml-matcher": "^1.1.1",
+    "prettier": "^1.18.0",
+    "semantic-release": "^15.13.15",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.1"
+  },
+  "dependencies": {
+    "@types/unzipper": "^0.9.2",
+    "axios": "^0.19.0",
+    "husky": "^2.4.0",
+    "lodash": "^4.17.11",
+    "unzipper": "^0.10.0",
+    "xml2js": "^0.4.19"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
