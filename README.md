@@ -1,5 +1,7 @@
 # Compuscan
 
+[![CircleCI](https://circleci.com/gh/markza/compuscan.svg?style=svg)](https://circleci.com/gh/markza/compuscan)
+
 ## Installation
 
 Install the dependencies
