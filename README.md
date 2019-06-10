@@ -1,8 +1,8 @@
-# compuscan
+# Compuscan
 
 ## Installation
 
-[npm][]:
+Install the dependencies
 
 ```bash
 npm install compuscan
@@ -33,3 +33,6 @@ npm install compuscan
 
   console.log(response);
 ```
+
+## LICENSE
+MIT
